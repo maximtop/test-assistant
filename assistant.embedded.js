@@ -8092,13 +8092,19 @@ var IframeControllerMobile = function ($, log, selector, localization, protected
             height: '56vw',
         };
 
-        showMenuItem('mobilePopup.html', null, null, styles);
-        console.log('iframe divs', iframe.contentDocument.querySelectorAll('div'));
-        console.log(iframe.contentDocument.querySelector('.start-select-mode'));
-        var startSelectMode = iframe.contentDocument.querySelector('.start-select-mode');
-        var cancelSelectMode = iframe.contentDocument.querySelector('.cancel-select-mode');
-        startSelectMode.addEventListener('click', startSelect);
-        cancelSelectMode.addEventListener('click', removeIframe);
+        var mobilePopupController = function() {
+            return {
+                init: function() {
+                    var startSelectMode = iframe.contentDocument.querySelector('.start-select-mode');
+                    var cancelSelectMode = iframe.contentDocument.querySelector('.cancel-select-mode');
+
+                    startSelectMode.addEventListener('click', startSelect);
+                    cancelSelectMode.addEventListener('click', removeIframe);
+                }
+            }
+        };
+
+        showMenuItem('mobilePopup.html', mobilePopupController(), null, styles);
     };
 
     var startSelect = function() {
