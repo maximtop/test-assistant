@@ -16,6 +16,7 @@
     </test>
     <script src="assistant.embedded.js"></script>
     <script>
+        console.log('init assitant');
         adguardAssistant().start(null, function(string) {
             console.log(string);
         });
