@@ -7634,6 +7634,7 @@ var SettingsMenuController = function ($, settings, button) { // jshint ignore:l
      Called from IframeController._showMenuItem to initialize view
      */
     var init = function (iframe) {
+        console.log(iframe);
         contentDocument = iframe.contentDocument;
         bindEvents();
         setDefaultSettings();
@@ -8092,7 +8093,9 @@ var IframeControllerMobile = function ($, log, selector, localization, protected
         };
 
         showMenuItem('mobilePopup.html', null, null, styles);
-
+        console.log(iframe);
+        console.log(this.iframe);
+        console.log(iframe.contentDocument.querySelector('.start-select-mode'));
         var startSelectMode = iframe.contentDocument.querySelector('.start-select-mode');
         var cancelSelectMode = iframe.contentDocument.querySelector('.cancel-select-mode');
 
