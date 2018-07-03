@@ -8093,12 +8093,11 @@ var IframeControllerMobile = function ($, log, selector, localization, protected
         };
 
         showMenuItem('mobilePopup.html', null, null, styles);
-        console.log(iframe);
-        console.log(this.iframe);
+        console.log('iframe', iframe);
+        console.log('iframe innerHtml', iframe.innerHTML);
         console.log(iframe.contentDocument.querySelector('.start-select-mode'));
         var startSelectMode = iframe.contentDocument.querySelector('.start-select-mode');
         var cancelSelectMode = iframe.contentDocument.querySelector('.cancel-select-mode');
-        console.log(startSelectMode);
         startSelectMode.addEventListener('click', startSelect);
         cancelSelectMode.addEventListener('click', removeIframe);
     };
