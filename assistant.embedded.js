@@ -8094,7 +8094,7 @@ var IframeControllerMobile = function ($, log, selector, localization, protected
 
         showMenuItem('mobilePopup.html', null, null, styles);
         console.log('iframe', iframe);
-        console.log('iframe innerHtml', iframe.contentDocument.innerHTML);
+        console.log('iframe content document', iframe.contentDocument);
         console.log(iframe.contentDocument.querySelector('.start-select-mode'));
         var startSelectMode = iframe.contentDocument.querySelector('.start-select-mode');
         var cancelSelectMode = iframe.contentDocument.querySelector('.cancel-select-mode');
