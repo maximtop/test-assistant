@@ -8098,7 +8098,7 @@ var IframeControllerMobile = function ($, log, selector, localization, protected
         console.log(iframe.contentDocument.querySelector('.start-select-mode'));
         var startSelectMode = iframe.contentDocument.querySelector('.start-select-mode');
         var cancelSelectMode = iframe.contentDocument.querySelector('.cancel-select-mode');
-
+        console.log(startSelectMode);
         startSelectMode.addEventListener('click', startSelect);
         cancelSelectMode.addEventListener('click', removeIframe);
     };
