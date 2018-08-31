@@ -9,15 +9,27 @@
 <body>
     <h1>Test header</h1>
     <div class="test">test</div>
-    <test class="3">
-        <div class="test2">test2</div>
-    </test>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>Select me</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="assistant.embedded.js"></script>
     <script>
         console.log('init assitant');
-        adguardAssistant().start(null, function(string) {
-            console.log(string);
-        });
+        adguardAssistant().start(null, function() {});
     </script>
 </body>
 </html>
