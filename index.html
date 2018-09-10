@@ -17,7 +17,7 @@
                         <div>
                             <div>
                                 <div>
-                                    <div>Select me</div>
+                                    <div>Select me gently</div>
                                 </div>
                             </div>
                         </div>
@@ -32,6 +32,7 @@
         const assistant = new adguardAssistant();
         assistant.start(null, function() {});
         setTimeout(function () {
+            console.log('test');
             assistant.stop();
         }, 1000)
     </script>
