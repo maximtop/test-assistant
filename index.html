@@ -29,7 +29,11 @@
     <script src="assistant.embedded.js"></script>
     <script>
         console.log('init assitant');
-        adguardAssistant().start(null, function() {});
+        const assistant = new adguardAssistant();
+        assistant.start(null, function() {});
+        setTimeout(function () {
+            assistant.stop();
+        }, 1000)
     </script>
 </body>
 </html>
